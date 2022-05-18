@@ -1,1 +1,13 @@
-<h1>Show list of users</h1>
+<ul class="userProfile">
+  <% @users.each do |user|%>
+    <%= link_to user do %>
+      <ul class="User">
+        <li class="userImage">
+          <img src=<%= user.photo %> alt="UserImage">
+        </li>
+        <li class="userName"><%= user.name %></li>
+        <li class="userNumberOfposts">Post:<%= user.posts_count %></li>
+      </ul>
+      <% end %>
+  <% end %>
+</ul>
