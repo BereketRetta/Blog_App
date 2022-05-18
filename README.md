@@ -1,62 +1,52 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# Blog App
 
-# Project Name
-
-> Description the project.
-
+The Blog app is a classic example of a blog website. Created a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
 ## Built With
-
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
+- Ruby
+- Rails
+- Postgres
 
 
-## Getting Started
+## `Getting Started`
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+To get a local copy of this project:
 
+Clone this repository or download the Zip folder:
+```
+git clone https://github.com/BereketRetta/Blog_App.git
+```
 
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
+To get started, In the root directory run:
+```
+gem install bundler
+```
+Then run:
+```
+rails s
+```
 
 
+## `Tests`
+### To track linter errors locally follow these steps:  
 
-## Authors
+Track linter errors run:
+```
+rubocop
+```
 
-👤 **Author1**
+## Author
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Bereket Retta**
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [BereketRetta](https://github.com/BereketRetta)
+- LinkedIn: [@BereketRetta](https://www.linkedin.com/in/bereket-retta/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](../Issues).
 
 ## Show your support
 
@@ -64,9 +54,10 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- This project is part module 4 in the Microverse study program.
+- Thanks to the Microverse team for the great curriculum.
+- Thanks to Code Reviewers for the insightful feedback.
+- A great thanks to My coding partners, morning session team, and standup team Partners for their contributions.
 
 ## 📝 License
 
