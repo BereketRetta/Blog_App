@@ -1,20 +1,20 @@
 class LikesController < ApplicationController
-    def new
-      @like = Like.new
-    end
-  
-    def create
-      @post = Post.find(params[:post_id])
-      @user = current_user
-      @like = Like.new(user_id: @user.id, post_id: @post.id)
-  
+  def new
+    @like = Like.new
+  end
+
+  def create
+    @post = Post.find(params[:post_id])
+    @user = current_user
+    @like = Like.new(user_id: @user.id, post_id: @post.id)
+
     if @like.save
-        @post = Post.find(params[:post_id])
-        redirect_to user_post_path(user_id: @post.user_id, id: @post.id)
+      @post = Post.find(params[:post_id])
+      redirect_to user_post_path(user_id: @post.user_id, id: @post.id)
+      flash[:notice] = 'Thanks for the like!'
     else
-        redirect_to user_post_path(user_id: @post.user_id, id: @post.id),
-                    alert: 'Error occurred while creating the like'
+      redirect_to user_post_path(user_id: @post.user_id, id: @post.id)
+      flash[:alert] = 'Like not submitted!'
     end
   end
 end
-  
