@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :users
   get 'comments/new'
   get 'likes/index'
   get 'likes/show'
@@ -9,5 +8,5 @@ Rails.application.routes.draw do
       resources :likes, only: [:new, :create]
     end
   end
-  root to: 'home#index'
+  root 'users#index'
 end
