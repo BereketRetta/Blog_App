@@ -1,24 +1,14 @@
-class CommentsController < ApplicationController
-  def new
-    @comment = Comment.new
-  end
+class ApplicationController < ActionController::Base
+  protect_from_forgery with: :exception
 
-  def create
-    @comment = Comment.new(comment_params)
-    @post = Post.find(params[:post_id])
-    @comment.user_id = current_user.id
-    @comment.post_id = @post.id
+  before_action :update_allowed_parameters, if: :devise_controller?
 
-    if @comment.save
-      redirect_to user_post_path(user_id: @post.user_id, id: @post.id)
-    else
-      render :new
+  protected
+
+  def update_allowed_parameters
+    devise_parameter_sanitizer.permit(:sign_up) do |u|
+      u.permit(:name, :email, :password, :email_confirmation, :password_confirmation)
     end
+    devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:name, :email, :password, :current_password) }
   end
-
-  def comment_params
-    params.require(:comment).permit(:text)
-  end
-
-  private :comment_params
 end
