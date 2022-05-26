@@ -14,7 +14,7 @@ class CommentsController < ApplicationController
       flash[:notice] = 'Thanks for commenting!'
     else
       render :new
-      flash[:alert] = 'Comment not submitted!'
+      flash[:notice] = 'Comment not submitted!'
     end
   end
 

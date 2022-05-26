@@ -14,7 +14,7 @@ class LikesController < ApplicationController
       flash[:notice] = 'Thanks for the like!'
     else
       redirect_to user_post_path(user_id: @post.user_id, id: @post.id)
-      flash[:alert] = 'Like not submitted!'
+      flash[:notice] = 'Like not submitted!'
     end
   end
 end
